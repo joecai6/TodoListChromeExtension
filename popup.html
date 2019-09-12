@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+
+<style>
+
+	html, body, h2 {
+		margin: 0 !important;
+		padding: 0;
+		max-width: 300px;
+	}
+	
+	.noselect {
+		user-select: none; 
+	}
+	
+	#top {
+		display: flex;
+		justify-content: space-between;
+		max-width: 300px;
+		padding: 15px;
+	}
+	
+	#clear {
+		background: lightgray;
+		padding: 5px;
+		margin-top: 5px;
+		height: 25px;
+	}
+	
+	#title {
+		font-size: 30px;
+	}
+	
+	#mid {
+		display: block;
+		width: 300px;
+		height: 300px;
+		overflow-y: auto;
+		overflow-x: hidden;
+	}
+	
+	ul {
+		margin: 0;
+		padding-left: 10px;
+	}
+	
+	ul li:hover {
+		background: khaki;
+	}
+	
+	ul li.checked {
+		background: lightyellow;
+		opacity: 0.6;
+	}
+	
+	.crossout {
+		text-decoration: line-through;
+	}
+	
+	#part {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	
+	#inputs {
+		background: lightgray;
+		margin: 10px;
+		font-size: 16px;
+		padding: 2px 5px;
+		border-style: solid;
+		border-width: 1px;
+		border-radius: 3px;
+	}
+	
+	.add-button {
+		background: lightgray;
+		font-size: 12px;
+		padding: 2px 10px;
+		cursor: pointer;
+		border-radius: 3px;
+		border-style: solid;
+		border-width: 1.5px;
+	}
+	
+	.add-button:hover {
+		font-size: 14px;
+	}
+	
+		
+	ul li {
+		display: flex;
+		justify-content: space-between;
+		list-style: none;
+		margin: 5px;
+		padding: 8px 10px;
+		background: yellow;
+		font-size: 14px;
+	}
+	
+	.txt {
+		width: 200px;
+		max-width: 200px;
+		overflow: hidden;
+	}
+	
+	.list-buttons {
+		display: flex;
+		justify-content: flex-end;
+		margin-left: 10px;
+		max-height: 20px;
+	}
+	
+	.delButton {
+		background: lightgray;
+		font-size: 12px;
+		margin-left: 10px;
+		border-radius: 3px;
+		border-style: none;
+		border-width: 1.5px;
+	}
+	
+	.editButton {
+		background: lightgray;
+		font-size: 12px;
+		border-radius: 3px;
+		border-style: none;
+		border-width: 1.5px;
+	}
+	
+	::-webkit-scrollbar {
+		width: 7px;
+	}
+
+	::-webkit-scrollbar-track {
+		background: #f1f1f1;
+	}
+
+	::-webkit-scrollbar-thumb {
+		background: #888;
+	}
+
+	::-webkit-scrollbar-thumb:hover {
+		background: #555;
+	}
+	
+	.hidden {
+		font-size: 1px;
+	}
+	
+</style>
+
+<html>
+	<head>
+		<script src="popup.js"></script>
+	</head>
+	<body>
+		<div id="top">
+			<h2 id="title">To-Do List</h2>
+			<button class="add-button" id="clear">Clear</button>
+		</div>
+		<section id="mid">
+			<ul id="list" class="noselect">
+	
+			</ul>
+		</section>
+		<div id="part"> 
+			<input type="text" id="inputs">
+			<button class="add-button" id="add">Add</button>
+			
+		</div>
+	</body>
+</html>

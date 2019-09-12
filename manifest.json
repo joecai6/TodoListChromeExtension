@@ -1,0 +1,23 @@
+{
+	"name": "Simple To-do List",
+	"version": "1.0",
+	"description": "Keep track of your tasks and maintain 		productivity",
+	"permissions": ["contextMenus", "storage"],
+	"manifest_version": 2,
+	"icons": {
+		"16": "icon16.png",
+		"48": "icon48.png",
+		"128": "icon128.png"
+	},
+	"browser_action": {
+		"default_icon": {
+			"16": "icon16.png"
+		},
+		"default_title": "TO-DO LIST",
+		"default_popup": "popup.html"
+	},
+	"background": {
+		"scripts": ["background.js"],
+		"persistent": false
+	}
+}
